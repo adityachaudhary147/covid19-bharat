@@ -1,0 +1,142 @@
+body {
+  font-family: "Avenir Next";
+}
+
+li {
+  list-style: none;
+}
+
+
+
+
+
+.main {
+  padding: 100px 80px;
+}
+
+.footer {
+  background-color: #2f5167;
+  color: #fff;
+  height: 120px;
+  padding: 40px;
+}
+
+.footer-logo {
+  float: left;
+  font-size: 32px;
+}
+
+.footer-list {
+  float: right;
+}
+
+.footer-list li {
+  padding-bottom: 20px;
+  color: #fff;
+}
+
+.footer-list a{
+  color:#fff !important;
+  text-decoration: none;
+} 
+.footer-list li {
+  padding-bottom: 20px;
+  color: #fff;
+}
+.secondf
+{
+  background: black;
+  color:white;
+  text-align: center;
+
+}
+.contactus
+{
+  height: 420px;
+}
+.about
+{
+  height: 420px;
+}
+.home
+{
+  height:420px;
+}
+.main{
+  height: auto;
+}
+
+.home-wrapper {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+}
+.print th 
+{
+  background-color: #00203FFF;
+  color: white;
+  opacity: 0.8;
+}
+.print th,td
+{
+  padding: 30px;
+
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+
+}
+.print td
+{
+  background-color:#ADEFD1FF;
+
+}
+.print tr:hover
+{
+  background-color: white;
+
+}
+.sp td
+{
+background-color:#9CC3D5FF; 
+}
+.flex-container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-container2
+{
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  border-radius: 18px;
+
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}

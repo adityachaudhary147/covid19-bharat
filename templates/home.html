@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="flex-container">
+	<div>
+{% if totindia %}
+
+<h1 style="text-align: center; color: darkblue">Total Cases <strong>{{totindia}}</strong></h1>
+{% else %}
+{% endif %}
+<h5><button class="button button2" style="align-items: center;"><a href="{{url_for('update')}}">Click to Update</a></button></h5>
+</table>
+<table style="width:100%" class="print" >
+  <tr>
+    <th>NAME (States)</th>
+    <th>Infected Indian Nationals</th>
+    <th>Infected Foreigners</th>
+    <th>RECOVERIES</th>
+    <th>DEATHS</th>
+  </tr>
+  {% for case in desccases %}
+    <tr>
+    	
+        <td>{{case.NAMEOFSTATE}}</td>
+        <td>{{case.INDIANCASES}}</td>
+        <td>{{case.FOREIGNCASES}}</td>
+        <td>{{case.RECOVEREDCASES}}</td>
+        <td>{{case.DEATHCASES}}</td>
+
+
+        
+    </tr>
+
+  {% endfor %}
+
+    
+  {% for case in totalcase %}
+    <tr class="sp">
+    	<td><strong>Total Cases</strong></td>
+    	
+        <td>{{case.INDIANCASES}}</td>
+        <td>{{case.FOREIGNCASES}}</td>
+        <td>{{case.RECOVEREDCASES}}</td>
+        <td>{{case.DEATHCASES}}</td>
+
+
+        
+    </tr>
+
+  {% endfor %}
+</table>
+<h5>SOURCE *http://mohfw.gov.in/</h5>
+</div>
+</div>
+{% endblock %}

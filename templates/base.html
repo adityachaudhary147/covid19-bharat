@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>COVID19INDIA</title>
+    <link rel="icon" href="../static/download.png">
+    <link rel="stylesheet" href="../static/stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="{{url_for('home')}}">COVID19INDIA-TRACKER</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="{{url_for('info')}}">TO-DO-IN-QUARANTINE</a></li>
+            <li><a href="{{url_for('about')}}">ABOUT US</a></li>
+            <li><a href="{{url_for('contactus')}}">CONTACT US</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="main">
+      {% block content %}
+      {% endblock %}
+    </div>
+
+    <div class="footer">
+      <div class="footer-logo">COVID19INDIA-TRACKER</div>
+      <div class="footer-list">
+        <ul>
+          <li><a href="{{url_for('about')}}">About</a></li>
+          <li><a href="{{url_for('contactus')}}">Contact Us</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+
+    <footer class="secondf">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+  </div>
+  <div class="footer-copyright">     Made with ❤️ By Aditya Chaudhary © 2020 Copyright: chaudharyaditya.in
+  </div>
+
+</footer>
+  </body>
+</html>
