@@ -77,7 +77,7 @@ def update():
 						if e!=len(strval)-1:
 							intval+=strval[e]
 					intval=int(intval)
-					listtot.append(intval)
+					listtot.append(intot)
 				elif intc!=0:
 					listtot.append(int(val.contents[0]))
 				intc+=1
