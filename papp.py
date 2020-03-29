@@ -54,9 +54,9 @@ def update():
 	# print (now.strftime("%Y-%m-%d %H:%M:%S"))
 	for w in list_of_all_tr:
 		state=w('td')
-		if len(state)==6:
+		if len(state)==5:
 			number=0
-			conn.execute('''INSERT OR REPLACE INTO CORONACASES(ID,NAMEOFSTATE,INDIANCASES,FOREIGNCASES,RECOVEREDCASES,DEATHCASES) VALUES(?,?,?,?,?,?);''',(int(state[0].contents[0]),str(state[1].contents[0]),int(state[2].contents[0]),int(state[3].contents[0]),int(state[4].contents[0]),int(state[5].contents[0])))
+			conn.execute('''INSERT OR REPLACE INTO CORONACASES(ID,NAMEOFSTATE,INDIANCASES,FOREIGNCASES,RECOVEREDCASES,DEATHCASES) VALUES(?,?,?,?,?,?);''',(int(state[0].contents[0]),str(state[1].contents[0]),int(state[2].contents[0]),0,int(state[3].contents[0]),int(state[4].contents[0])))
 			# print("inserted Success")
 			for val in state:
 				if number==2:
@@ -64,7 +64,7 @@ def update():
 				# print((val.contents[0]),end="     ")
 				number+=1
 			# print()
-		elif len(state)==5:
+		elif len(state)==4:
 			state=w('strong')
 			listtot=[]
 			intc=0
@@ -82,9 +82,9 @@ def update():
 					listtot.append(int(val.contents[0]))
 				intc+=1
 			# print(listtot)
-			conn.execute('''INSERT OR REPLACE INTO TOTCORONACASES(ID,INDIANCASES,FOREIGNCASES,RECOVEREDCASES,DEATHCASES) VALUES(?,?,?,?,?);''',(1,listtot[0],listtot[1],listtot[2],listtot[3]))		
+			conn.execute('''INSERT OR REPLACE INTO TOTCORONACASES(ID,INDIANCASES,FOREIGNCASES,RECOVEREDCASES,DEATHCASES) VALUES(?,?,?,?,?);''',(1,listtot[0],0,listtot[1],listtot[2]))		
 			# print()
-	qwer=listtot[0]+listtot[1]
+	qwer=listtot[0]
 	# print("indian confirmed total  ",intot)
 	conn.commit()
 	# print("commited")

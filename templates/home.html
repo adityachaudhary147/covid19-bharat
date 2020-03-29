@@ -2,6 +2,7 @@
 {% block content %}
 <div class="flex-container">
 	<div>
+		<h1><strong>IMPACT OF COVID-19 IN DIFFERENT REGION IN INDIA</strong></h1>
 {% if totindia %}
 
 <h1 style="text-align: center; color: darkblue">Total Cases <strong>{{totindia}}</strong></h1>
@@ -12,8 +13,8 @@
 <table style="width:100%" class="print" >
   <tr>
     <th>NAME (States)</th>
-    <th>Infected Indian Nationals</th>
-    <th>Infected Foreigners</th>
+    <th>Infected People (including foreigners)</th>
+    
     <th>RECOVERIES</th>
     <th>DEATHS</th>
   </tr>
@@ -22,7 +23,6 @@
     	
         <td>{{case.NAMEOFSTATE}}</td>
         <td>{{case.INDIANCASES}}</td>
-        <td>{{case.FOREIGNCASES}}</td>
         <td>{{case.RECOVEREDCASES}}</td>
         <td>{{case.DEATHCASES}}</td>
 
@@ -38,7 +38,6 @@
     	<td><strong>Total Cases</strong></td>
     	
         <td>{{case.INDIANCASES}}</td>
-        <td>{{case.FOREIGNCASES}}</td>
         <td>{{case.RECOVEREDCASES}}</td>
         <td>{{case.DEATHCASES}}</td>
 
