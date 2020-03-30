@@ -3,12 +3,10 @@
 <div class="flex-container">
 	<div>
 		<h1><strong>IMPACT OF COVID-19 IN DIFFERENT REGION IN INDIA</strong></h1>
-{% if totindia %}
 
-<h1 style="text-align: center; color: darkblue">Total Active Cases <strong>{{totindia}}</strong></h1>
-{% else %}
-{% endif %}
-<h5><button class="button button2" style="align-items: center;"><a href="{{url_for('update')}}">Click to Update</a></button></h5>
+
+<h1 style="text-align: center; color: darkblue">Total Active Cases <strong>{{totalcase[0].INDIANCASES}}</strong></h1>
+<h5><a href="{{url_for('update')}}"><button class="button button2" style="align-items: center;">Click to Update</button></a></h5>
 </table>
 <table style="width:100%" class="print" >
   <tr>
