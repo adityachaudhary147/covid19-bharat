@@ -5,4 +5,4 @@ A WEB App using Flask Python which describe the impact of Corona Virus Outbreak 
 Source of data http://mohfw.gov.in/...
 </p>
 <br>
-The app is live on <a>https://covid19-bharat.herokuapp.com/</a>
+The app is live <a href="https://covid19-bharat.herokuapp.com/">here</a>
