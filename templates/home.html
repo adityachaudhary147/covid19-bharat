@@ -2,50 +2,47 @@
 {% block content %}
 <div class="flex-container">
 	<div>
-		<h1><strong>IMPACT OF COVID-19 IN DIFFERENT REGION IN INDIA</strong></h1>
+		<h1><strong>IMPACT OF COVID-19 ON INDIA</strong></h1>
 
 
-<h1 style="text-align: center; color: darkblue">Total Active Cases <strong>{{totalcase[0].INDIANCASES}}</strong></h1>
+<h1 style="text-align: center; color: darkblue">Total Active Cases <strong>{{Current['Active']}}</strong></h1>
 <h5><a href="{{url_for('update')}}"><button class="button button2" style="align-items: center;">Click to Update</button></a></h5>
 </table>
 <table style="width:100%" class="print" >
   <tr>
-    <th>NAME (States)</th>
-    <th>Infected People (including foreigners)</th>
+    <th>CONFIRMED CASES</th>
+    <th>ACTIVE CASES </th>
     
-    <th>RECOVERIES</th>
-    <th>DEATHS</th>
+    <th>RECOVERED</th>
+    <th>DECEASED</th>
+
   </tr>
-  {% for case in desccases %}
     <tr>
     	
-        <td>{{case.NAMEOFSTATE}}</td>
-        <td>{{case.INDIANCASES}}</td>
-        <td>{{case.RECOVEREDCASES}}</td>
-        <td>{{case.DEATHCASES}}</td>
+        <td>{{Current['Confirm']}}</td>
+        <td>{{Current['Active']}}</td>
+        <td>{{Current['Recovered']}}</td>
+        <td>{{Current['Deceased']}}</td>
 
 
         
     </tr>
 
-  {% endfor %}
-
-    
-  {% for case in totalcase %}
-    <tr class="sp">
-    	<td><strong>Total Cases</strong></td>
-    	
-        <td>{{case.INDIANCASES}}</td>
-        <td>{{case.RECOVEREDCASES}}</td>
-        <td>{{case.DEATHCASES}}</td>
-
-
-        
-    </tr>
-
-  {% endfor %}
 </table>
-<h5>SOURCE *http://mohfw.gov.in/</h5>
+<h5>SOURCE *covid19india.org</h5>
+
+<h1><strong>LATEST TREND  OF COVID-19  IN INDIA</strong></h1>
+
+
+<h1 style="text-align: center; color: red">Increase In Active Cases <strong>{{Latest_increase['Active']}}</strong></h1>
+
+<h1 style="text-align: center; color: blue">Increase In Recovered Cases <strong>{{Latest_increase['Recovered']}}</strong></h1>
+
+<h1 style="text-align: center; color: red">Increase In Confirm Cases <strong>{{Latest_increase['Confirm']}}</strong></h1>
+
+<h1 style="text-align: center; color: black">Increase In Deceased Cases <strong>{{Latest_increase['Deceased']}}</strong></h1>
+
+
 </div>
 </div>
 {% endblock %}
